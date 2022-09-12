@@ -1,4 +1,4 @@
-#library imports
+# library imports
 import webbrowser
 import pywhatkit
 from random import randint
@@ -6,11 +6,11 @@ from random import choice
 from time import sleep
 import ctypes
 
-#ascii art logo because low budget
+# ascii art logo because low budget
 print("""
 
-                                                                                                                                                                                                                                               
-                                                                                                                                                                                                                                               
+
+
 BBBBBBBBBBBBBBBBB               AAA               DDDDDDDDDDDDD             BBBBBBBBBBBBBBBBB   RRRRRRRRRRRRRRRRR        OOOOOOOOO     WWWWWWWW         good luck         WWWWWWWW   SSSSSSSSSSSSSSS EEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRR   
 B::::::::::::::::B             A:::A              D::::::::::::DDD          B::::::::::::::::B  R::::::::::::::::R     OO:::::::::OO   W::::::W                           W::::::W SS:::::::::::::::SE::::::::::::::::::::ER::::::::::::::::R  
 B::::::BBBBBB:::::B           A:::::A             D:::::::::::::::DD        B::::::BBBBBB:::::B R::::::RRRRRR:::::R  OO:::::::::::::OO W::::::W                           W::::::WS:::::SSSSSS::::::SE::::::::::::::::::::ER::::::RRRRRR:::::R 
@@ -32,49 +32,57 @@ BBBBBBBBBBBBBBBBBAAAAAAA                   AAAAAAADDDDDDDDDDDDD             BBBB
 running = True
 while running == True:
 
-    #Main program
+    # Main program
 
-    search = input ("What are you looking for today?")
+    search = input("What are you looking for today?")
     search = search.lower()
 
-    if search =='stop running':
+    if search == 'stop running':
         quit()
 
-    #Blocking other search engines, why use them when you have this... thing... that uses them...
-    if search =='google' or search =='bing':
-        print ("Loading...")
-        sleep (10)
-        print ("Hang on this will take a few seconds...")
-        sleep (18)
-        print ("Recalculating...")
-        print ("Loading, this will take approximately.... 1 year")
+    # Blocking other search engines, why use them when you have this... thing... that uses them...
+    if search == 'google' or search == 'bing':
+        print("Loading...")
+        sleep(10)
+        print("Hang on this will take a few seconds...")
+        sleep(18)
+        print("Recalculating...")
+        print("Loading, this will take approximately.... 1 year")
         count = 0
         while count != 52:
-            sleep (604800)
-            count = count +1
-        quit ()
+            sleep(604800)
+            count = count + 1
+        quit()
 
-
-    #deciding conditions
+    # deciding conditions
     if search == 'test(1)':
         conditions = 1
-    elif search =='test(2)':
+    elif search == 'test(2)':
         conditions = 2
-    elif search =='test(3)':
+    elif search == 'test(3)':
         conditions = 3
-    elif search =='test(4)':
+    elif search == 'test(4)':
         conditions = 4
     else:
-        conditions = randint(1,4)
+        conditions = randint(1, 4)
 
-    #adding function to the conditions
+    # adding function to the conditions
     if conditions == 3:
-        webbrowser.open('https://www.youtube.com/watch?v=Lrj2Hq7xqQ8')
+        webbrowser.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
     elif conditions == 4:
-        word_list = ['apple','banana','cherry','dates','etc', 'absorb','abuse','academic','accept','access','accident','accompany','accomplish','according','account','accurate','become','bed','bedroom','beer','before','begin','beginning','behavior','behind','being','belief','believe','bell','belong','below','belt','bench','bend','beneath','benefit','beside','besides','best','bet','better','between','beyond','Bible','big','bike','bill','billion','bind','biological','bird','birth','birthday','bit','bite','black','blade','blame','blanket','blind','block','blood','blow','blue','board','boat','body','bomb','bombing','bond','bone','book','boom','conclusion','concrete','condition','conduct','conference','confidence','confident','confirm','conflict','confront','confusion','Congress','congressional','connect']
+        word_list = ['apple', 'banana', 'cherry', 'dates', 'etc', 'absorb', 'abuse', 'academic', 'accept', 'access',
+                     'accident', 'accompany', 'accomplish', 'according', 'account', 'accurate', 'become', 'bed',
+                     'bedroom', 'beer', 'before', 'begin', 'beginning', 'behavior', 'behind', 'being', 'belief',
+                     'believe', 'bell', 'belong', 'below', 'belt', 'bench', 'bend', 'beneath', 'benefit', 'beside',
+                     'besides', 'best', 'bet', 'better', 'between', 'beyond', 'Bible', 'big', 'bike', 'bill', 'billion',
+                     'bind', 'biological', 'bird', 'birth', 'birthday', 'bit', 'bite', 'black', 'blade', 'blame',
+                     'blanket', 'blind', 'block', 'blood', 'blow', 'blue', 'board', 'boat', 'body', 'bomb', 'bombing',
+                     'bond', 'bone', 'book', 'boom', 'conclusion', 'concrete', 'condition', 'conduct', 'conference',
+                     'confidence', 'confident', 'confirm', 'conflict', 'confront', 'confusion', 'Congress',
+                     'congressional', 'connect']
         research = choice(word_list)
         pywhatkit.search(research)
-    elif conditions ==1:
+    elif conditions == 1:
         pywhatkit.search(search)
     else:
         webbrowser.open('https://t4.ftcdn.net/jpg/03/17/05/39/360_F_317053936_O2grehTc0hFvxhbTbRoAS6nYInVQlDmz.jpg')
