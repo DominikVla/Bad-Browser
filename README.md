@@ -1,6 +1,6 @@
 # Bad-Browser
 
-If you are able to use this, and only this for a month without getting annoyed I'll be impressed.
+A random, short coding project made for college.
 
 **REQUIREMENTS:**
   * pywhatkit (https://pypi.org/project/pywhatkit/)
